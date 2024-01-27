@@ -3,7 +3,7 @@ import HeaderDesktop from "./HeaderDesktop";
 
 export const NAVIGATIONS = [
   {
-    href: "/home",
+    href: "/",
     title: "Home",
   },
   {
@@ -12,7 +12,7 @@ export const NAVIGATIONS = [
   },
   {
     href: "/login",
-    title: "Log in / Registration",
+    title: "Log in",
   },
   {
     href: "/contacts",

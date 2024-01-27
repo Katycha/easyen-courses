@@ -9,7 +9,7 @@ const montserrat = Montserrat({
 
 export const metadata = {
   title: "EasyEn - English Language Courses",
-  description: "Let's prove that learning English is easy",
+  description: "Learn English Easily",
 };
 
 export default function RootLayout({ children }) {
