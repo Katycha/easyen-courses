@@ -1,10 +1,15 @@
+"use client";
+
 import Aiperi from "@/assets/Aiperi.jpeg";
 import Adina from "@/assets/Adina.jpeg";
 import Sapargul from "@/assets/Sapargul.jpeg";
 import Benazir from "@/assets/Benazir.jpeg";
 import Syimyk from "@/assets/Syimyk.jpeg";
 import Nursultan from "@/assets/Nursultan.jpeg";
+import Work1 from "@/assets/Work1.webp";
 import Image from "next/image";
+import { Button } from "@mui/material";
+import { Toaster, toast } from "sonner";
 
 const Ourteam = () => {
   const teachers = [
@@ -16,15 +21,17 @@ const Ourteam = () => {
       country: "UK",
       test: "IELTS 7.5",
       age: 32,
+      level: "Beginner level",
     },
     {
       img: Syimyk,
       name: "Syimyk Zhyrgalbekov",
       id: 2,
-      university: "Gadjah Mada University",
+      university: "Mercubuana University",
       country: "Indonesia",
       test: "SAT 200",
       age: 24,
+      level: "Upper-intermediate level",
     },
     {
       img: Benazir,
@@ -34,6 +41,7 @@ const Ourteam = () => {
       country: "Kyrgyzstan",
       test: "TOEFL 120",
       age: 27,
+      level: "Intermediate level",
     },
     {
       img: Aiperi,
@@ -43,6 +51,7 @@ const Ourteam = () => {
       country: "Kyrgyzstan",
       test: "IELTS 8.0",
       age: 24,
+      level: "Beginner level",
     },
 
     {
@@ -53,6 +62,7 @@ const Ourteam = () => {
       country: "USA",
       test: "IELTS 7.5",
       age: 30,
+      level: "Upper-intermediate level",
     },
     {
       img: Nursultan,
@@ -62,14 +72,23 @@ const Ourteam = () => {
       country: "USA",
       test: "Duolingo 90",
       age: 26,
+      level: "Intermediate level",
     },
   ];
+
+  const handleClick = (event) => {
+    toast.success("Successfully joined!");
+  };
+
   return (
     <div className="tw-bg-[#7a1d39] tw-p-[50px]">
-      <div className="tw-flex tw-justify-center tw-items-center tw-basis-1/3 tw-flex-wrap tw-px-[20px] tw-gap-x-[50px]">
+      <h2 className="tw-text-center tw-text-[#d6c3a5] tw-mb-[40px]">
+        Our mentors
+      </h2>
+      <div className="tw-flex tw-justify-center tw-items-center tw-basis-1/3 tw-flex-wrap tw-px-[20px] tw-gap-x-[50px] tw-mb-[50px]">
         {teachers.map((item) => (
           <div
-            className="tw-w-[300px] tw-h-[350px] tw-rounded-lg tw-border-[red] tw-text-[#fff]"
+            className="tw-w-[300px] tw-h-[350px] tw-rounded-lg tw-border-solid tw-border-2   tw-border-[#d6c3a5] tw-text-center tw-pt-[10px] tw-mb-[30px] tw-bg-blur-2xl tw-text-[#d6c3a5]"
             key={item.id}
           >
             <Image
@@ -80,11 +99,52 @@ const Ourteam = () => {
             <p>
               {item.name} , {item.age} y.o.
             </p>
-            <p>{item.university}</p>
+            <p>Education: {item.university}</p>
             <p>{item.country}</p>
+            <p>Mentor of: {item.level}</p>
+            <div className="tw-mt-[10px]">
+              <Button
+                variant="contained"
+                className="tw-bg-[#d6c3a5] tw-text-[#7a1d39]"
+                onClick={handleClick}
+              >
+                join
+              </Button>
+            </div>
           </div>
         ))}
       </div>
+      <div className="tw-text-[#d6c3a5] tw-flex tw-flex-col tw-text-center tw-px-[20px] tw-gap-y-[40px]">
+        <h2>How EasyEn works</h2>
+        <div className="tw-flex tw-justify-between">
+          <div className="">
+            <Image
+              src={Work1}
+              alt="mobile"
+              className="tw-w-[300px] tw-h-[450px]"
+            />
+          </div>
+          <div className="tw-flex tw-flex-col tw-gap-y-[30px]  tw-justify-center">
+            <h3>Real-Life Conversations</h3>
+            <p>
+              Engage in enjoyable and dynamic voice conversations with our
+              mentors.
+            </p>
+            <h3>Refine Your Pronunciation</h3>
+            <p>
+              Improve your pronunciation skills with instant feedback and
+              practice.
+            </p>
+            <h3>Immediate Feedback</h3>
+            <p>
+              Receive instant feedback on your language skills and valuable tips
+              for improvement.
+            </p>
+          </div>
+        </div>
+        <h1>Hello world</h1>
+      </div>
+      <Toaster richColors />
     </div>
   );
 };
