@@ -7,6 +7,10 @@ import Benazir from "@/assets/Benazir.jpeg";
 import Syimyk from "@/assets/Syimyk.jpeg";
 import Nursultan from "@/assets/Nursultan.jpeg";
 import Work1 from "@/assets/Work1.webp";
+import Work2 from "@/assets/Work2.webp";
+import Work3 from "@/assets/Work3.webp";
+import Work4 from "@/assets/Work4.webp";
+import Hi from "@/assets/Hi.webp";
 import Image from "next/image";
 import { Button } from "@mui/material";
 import { Toaster, toast } from "sonner";
@@ -115,8 +119,41 @@ const Ourteam = () => {
         ))}
       </div>
       <div className="tw-text-[#d6c3a5] tw-flex tw-flex-col tw-text-center tw-px-[20px] tw-gap-y-[40px]">
-        <h2>How EasyEn works</h2>
-        <div className="tw-flex tw-justify-between">
+        <div className="tw-flex tw-justify-between tw-mx-[40px] tw-my-[40px]">
+          <div className="tw-flex tw-flex-col tw-gap-y-[30px]  tw-justify-center">
+            <h2>Why we created EasyEn</h2>
+            <p>
+              It is a journey filled with excitement, discovery, and a promise
+              to help others unlock the wonders of the world, one word at a
+              time.
+            </p>
+          </div>
+          <div>
+            <Image
+              src={Hi}
+              alt="mobile"
+              className="tw-w-[450px] tw-h-[300px] tw-ml-[40px] tw-rounded-[10%]"
+            />
+          </div>
+        </div>
+        <h1>How EasyEn works</h1>
+        <div className="tw-flex tw-justify-between tw-mx-[40px]">
+          <div className="tw-flex tw-flex-col tw-gap-y-[30px]  tw-justify-center">
+            <h3>Explore Multiply Languages</h3>
+            <p>
+              Start by practising the most popular languages in the world, and
+              stay tuned for our ongoing additions to our language list.
+            </p>
+          </div>
+          <div>
+            <Image
+              src={Work1}
+              alt="mobile"
+              className="tw-w-[300px] tw-h-[450px] tw-ml-[40px]"
+            />
+          </div>
+        </div>
+        <div className="tw-flex tw-justify-between tw-mx-[40px]">
           <div className="">
             <Image
               src={Work1}
@@ -140,6 +177,54 @@ const Ourteam = () => {
               Receive instant feedback on your language skills and valuable tips
               for improvement.
             </p>
+          </div>
+        </div>
+        <div className="tw-flex tw-justify-between tw-mx-[40px]">
+          <div className="tw-flex tw-flex-col tw-gap-y-[30px]  tw-justify-center">
+            <h3>Explore Multiply Languages</h3>
+            <p>
+              Start by practising the most popular languages in the world, and
+              stay tuned for our ongoing additions to our language list.
+            </p>
+          </div>
+          <div>
+            <Image
+              src={Work1}
+              alt="mobile"
+              className="tw-w-[300px] tw-h-[450px] tw-ml-[40px]"
+            />
+          </div>
+        </div>
+        <div className="tw-flex tw-justify-between tw-mx-[40px]">
+          <div className="">
+            <Image
+              src={Work3}
+              alt="mobile"
+              className="tw-w-[300px] tw-h-[450px]"
+            />
+          </div>
+          <div className="tw-flex tw-flex-col tw-gap-y-[30px]  tw-justify-center">
+            <h3>Interesting Topics to Explore</h3>
+            <p>
+              Talk about the weather or prepare for a job interview - choose a
+              topic based on your current mood.
+            </p>
+          </div>
+        </div>
+        <div className="tw-flex tw-justify-between tw-mx-[40px]">
+          <div className="tw-flex tw-flex-col tw-gap-y-[30px]  tw-justify-center">
+            <h3>Seamless Translations</h3>
+            <p>
+              Access instant translations to assist you during your
+              conversations and learning journey.
+            </p>
+          </div>
+          <div>
+            <Image
+              src={Work4}
+              alt="mobile"
+              className="tw-w-[300px] tw-h-[450px] tw-ml-[40px]"
+            />
           </div>
         </div>
         <h1>Hello world</h1>
