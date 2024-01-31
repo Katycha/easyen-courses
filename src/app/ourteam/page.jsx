@@ -119,8 +119,8 @@ const Ourteam = () => {
         ))}
       </div>
       <div className="tw-text-[#d6c3a5] tw-flex tw-flex-col tw-text-center tw-px-[20px] tw-gap-y-[40px]">
-        <div className="tw-flex tw-justify-between tw-mx-[40px] tw-my-[40px]">
-          <div className="tw-flex tw-flex-col tw-gap-y-[30px]  tw-justify-center">
+        <div className="tw-flex tw-flex-col tw-gap-y-[40px] md:tw-flex md:tw-flex-row md:tw-justify-between md:tw-mx-[40px]">
+          <div className="tw-flex tw-flex-col tw-gap-y-[30px] tw-justify-center">
             <h2>Why we created EasyEn</h2>
             <p>
               It is a journey filled with excitement, discovery, and a promise
@@ -132,33 +132,17 @@ const Ourteam = () => {
             <Image
               src={Hi}
               alt="mobile"
-              className="tw-w-[450px] tw-h-[300px] tw-ml-[40px] tw-rounded-[10%]"
+              className="tw-w-[300px] tw-h-[200px] md:tw-w-[450px] md:tw-h-[300px] md:tw-ml-10 tw-rounded-[10%]"
             />
           </div>
         </div>
-        <h1>How EasyEn works</h1>
-        <div className="tw-flex tw-justify-between tw-mx-[40px]">
-          <div className="tw-flex tw-flex-col tw-gap-y-[30px]  tw-justify-center">
-            <h3>Explore Multiply Languages</h3>
-            <p>
-              Start by practising the most popular languages in the world, and
-              stay tuned for our ongoing additions to our language list.
-            </p>
-          </div>
-          <div>
-            <Image
-              src={Work1}
-              alt="mobile"
-              className="tw-w-[300px] tw-h-[450px] tw-ml-[40px]"
-            />
-          </div>
-        </div>
-        <div className="tw-flex tw-justify-between tw-mx-[40px]">
+        <h1 className="tw-my-[30px]">How EasyEn works</h1>
+        <div className="tw-flex tw-flex-col tw-gap-y-[40px] md:tw-flex md:tw-flex-row md:tw-justify-between md:tw-mx-[40px]">
           <div className="">
             <Image
               src={Work1}
               alt="mobile"
-              className="tw-w-[300px] tw-h-[450px]"
+              className="tw-h-[300px] tw-w-[200px] md:tw-w-[300px] md:tw-h-[450px] md:tw-mr-10"
             />
           </div>
           <div className="tw-flex tw-flex-col tw-gap-y-[30px]  tw-justify-center">
@@ -179,7 +163,7 @@ const Ourteam = () => {
             </p>
           </div>
         </div>
-        <div className="tw-flex tw-justify-between tw-mx-[40px]">
+        <div className="tw-flex tw-flex-col-reverse tw-gap-y-[40px] md:tw-flex md:tw-flex-row md:tw-justify-between md:tw-mx-[40px]">
           <div className="tw-flex tw-flex-col tw-gap-y-[30px]  tw-justify-center">
             <h3>Explore Multiply Languages</h3>
             <p>
@@ -189,18 +173,18 @@ const Ourteam = () => {
           </div>
           <div>
             <Image
-              src={Work1}
+              src={Work2}
               alt="mobile"
-              className="tw-w-[300px] tw-h-[450px] tw-ml-[40px]"
+              className="tw-h-[300px] tw-w-[200px] md:tw-w-[300px] md:tw-h-[450px] md:tw-ml-[40px]"
             />
           </div>
         </div>
-        <div className="tw-flex tw-justify-between tw-mx-[40px]">
+        <div className="tw-flex tw-flex-col tw-gap-y-[40px] md:tw-flex md:tw-flex-row md:tw-justify-between md:tw-mx-[40px]">
           <div className="">
             <Image
               src={Work3}
               alt="mobile"
-              className="tw-w-[300px] tw-h-[450px]"
+              className="tw-h-[300px] tw-w-[200px] md:tw-w-[300px] md:tw-h-[450px] md:tw-mr-10"
             />
           </div>
           <div className="tw-flex tw-flex-col tw-gap-y-[30px]  tw-justify-center">
@@ -211,7 +195,7 @@ const Ourteam = () => {
             </p>
           </div>
         </div>
-        <div className="tw-flex tw-justify-between tw-mx-[40px]">
+        <div className="tw-flex tw-flex-col-reverse tw-gap-y-[40px] md:tw-flex md:tw-flex-row md:tw-justify-between md:tw-mx-[40px]">
           <div className="tw-flex tw-flex-col tw-gap-y-[30px]  tw-justify-center">
             <h3>Seamless Translations</h3>
             <p>
@@ -223,11 +207,10 @@ const Ourteam = () => {
             <Image
               src={Work4}
               alt="mobile"
-              className="tw-w-[300px] tw-h-[450px] tw-ml-[40px]"
+              className=" tw-h-[300px] tw-w-[200px] md:tw-w-[300px] md:tw-h-[450px] md:tw-ml-[40px]"
             />
           </div>
         </div>
-        <h1>Hello world</h1>
       </div>
       <Toaster richColors />
     </div>
