@@ -72,7 +72,7 @@ const Ourteam = () => {
       img: Nursultan,
       name: "Nursultan Asylov",
       id: 6,
-      university: "Bemidji State University",
+      university: "University of Massachusetts Amherst",
       country: "USA",
       test: "Duolingo 90",
       age: 26,
