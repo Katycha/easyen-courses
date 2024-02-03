@@ -1,3 +1,5 @@
+"use client";
+
 import Icon1 from "@/assets/Icon1.svg";
 import Icon2 from "@/assets/Icon2.svg";
 import Icon3 from "@/assets/Icon3.svg";
@@ -6,8 +8,37 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import Image from "next/image";
+import NextLink from "next/link";
+import React, { useEffect, useRef, useState } from "react";
 
 const Contacts = () => {
+  const mapContainerRef = useRef(null);
+  const [mapLoaded, setMapLoaded] = useState(false);
+
+  useEffect(() => {
+    if (!mapLoaded) {
+      const googleMapScript = document.createElement("script");
+      googleMapScript.src = `https://maps.googleapis.com/maps/api/js?key=9fb28f30b50852552c0f81578c102e32bb6dee7c&callback=initMap`;
+      googleMapScript.async = true;
+      googleMapScript.defer = true;
+      window.initMap = initMap;
+      document.body.appendChild(googleMapScript);
+      setMapLoaded(true);
+    }
+  }, [mapLoaded]);
+
+  const initMap = () => {
+    const map = new window.google.maps.Map(mapContainerRef.current, {
+      center: { lat: YOUR_LATITUDE, lng: YOUR_LONGITUDE },
+      zoom: 15,
+    });
+    const marker = new window.google.maps.Marker({
+      position: { lat: YOUR_LATITUDE, lng: YOUR_LONGITUDE },
+      map: map,
+      title: "Our Location",
+    });
+  };
+
   const cards = [
     {
       id: 1,
@@ -55,27 +86,46 @@ const Contacts = () => {
           <div className="tw-flex tw-flex-col tw-gap-y-[30px]">
             <div className="tw-flex tw-items-center tw-justify-between">
               <h4>We are on the Instagram: </h4>
-              <IconButton sx={{ color: "#d6c3a5" }}>
-                <InstagramIcon />
-              </IconButton>
+              <NextLink
+                href="https://www.instagram.com/makesyoufluent?igsh=MTRtbmdvaWs5anpicg=="
+                passHref
+              >
+                <IconButton sx={{ color: "#d6c3a5" }}>
+                  <InstagramIcon />
+                </IconButton>
+              </NextLink>
             </div>
             <div className="tw-flex tw-items-center  tw-justify-between">
               <h4>We are on WhatsApp :</h4>
-              <IconButton sx={{ color: "#d6c3a5" }}>
-                <WhatsAppIcon />
-              </IconButton>
+              <NextLink
+                href="https://chat.whatsapp.com/CNQSJjK3WWhC6swbC3TSOl"
+                passHref
+              >
+                <IconButton sx={{ color: "#d6c3a5" }}>
+                  <WhatsAppIcon />
+                </IconButton>
+              </NextLink>
             </div>
             <div className="tw-flex tw-items-center  tw-justify-between">
               <h4>We are on Youtube: </h4>
-              <IconButton sx={{ color: "#d6c3a5" }}>
-                <YouTubeIcon />
-              </IconButton>
+              <NextLink
+                href="https://youtube.com/@MakesYouFluent?si=FrrTzxWd98jZNmpo"
+                passHref
+              >
+                <IconButton sx={{ color: "#d6c3a5" }}>
+                  <YouTubeIcon />
+                </IconButton>
+              </NextLink>
             </div>
           </div>
           <div>
             <p className="tw-text-[16px] tw-font-bold md:tw-text-[20px]">
               We are located at: Bishkek city A.Tokombaev 23/1
             </p>
+            <div
+              ref={mapContainerRef}
+              style={{ width: "400px", height: "300px" }}
+            ></div>
           </div>
         </div>
       </div>
