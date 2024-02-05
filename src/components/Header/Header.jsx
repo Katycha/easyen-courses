@@ -12,7 +12,7 @@ export const NAVIGATIONS = [
   },
   {
     href: "/login",
-    title: "Log in",
+    title: "Log In",
   },
   {
     href: "/contacts",

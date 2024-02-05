@@ -10,6 +10,7 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 import Image from "next/image";
 import NextLink from "next/link";
 import React, { useEffect, useRef, useState } from "react";
+import Location from "@/assets/Location.jpeg";
 
 const Contacts = () => {
   const mapContainerRef = useRef(null);
@@ -83,7 +84,7 @@ const Contacts = () => {
       </div>
       <div>
         <div className="tw-flex tw-flex-col tw-gap-y-[40px] tw-mt-10 md:tw-flex md:tw-flex-row md:tw-justify-center md:tw-gap-x-[40px] ">
-          <div className="tw-flex tw-flex-col tw-gap-y-[30px]">
+          <div className="tw-flex tw-flex-col tw-gap-y-[60px]">
             <div className="tw-flex tw-items-center tw-justify-between">
               <h4>We are on the Instagram: </h4>
               <NextLink
@@ -118,14 +119,15 @@ const Contacts = () => {
               </NextLink>
             </div>
           </div>
-          <div>
-            <p className="tw-text-[16px] tw-font-bold md:tw-text-[20px]">
+          <div className="tw-flex tw-flex-col tw-gap-y-[20px] tw-pt-[5px]">
+            <p className="tw-text-[15px] tw-font-semibold md:tw-text-[18px]">
               We are located at: Bishkek city A.Tokombaev 23/1
             </p>
-            <div
-              ref={mapContainerRef}
-              style={{ width: "400px", height: "300px" }}
-            ></div>
+            <Image
+              src={Location}
+              alt="location"
+              className="tw-w-[300px] tw-h-[200px]"
+            />
           </div>
         </div>
       </div>
