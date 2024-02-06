@@ -6,7 +6,7 @@ const HeaderMobile = () => {
   return (
     <div className="tw-flex md:tw-hidden tw-px-[20px]">
       <div>
-        <nav className="tw-flex tw-flex-col tw-gap-y-[5px] tw-items-center">
+        <nav className="tw-flex tw-flex-col tw-gap-y-[5px]  tw-justify-center tw-items-center">
           {NAVIGATIONS.map((item) => (
             <Link
               key={item.title}

@@ -27,7 +27,9 @@ export const NAVIGATIONS = [
 const Header = () => {
   return (
     <div className="tw-pt-[15px] w-[100%]">
-      <HeaderMobile />
+      <div className="tw-flex tw-items-center">
+        <HeaderMobile />
+      </div>
       <HeaderDesktop />
     </div>
   );

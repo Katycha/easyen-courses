@@ -1,9 +1,25 @@
-/*import { Box, Typography, TextField, Checkbox, Button } from "@mui/material";
-import axios from "axios";
-import { useState } from "react";
-import { toast } from "sonner"; 
+"use client";
 
-function Login() {
+import {
+  Box,
+  Checkbox,
+  TextField,
+  Typography,
+  FormControlLabel,
+  Button,
+} from "@mui/material";
+import GoogleIcon from "@mui/icons-material/Google";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import { useState } from "react";
+import axios from "axios";
+import Image from "next/image";
+import Logo from "@/assets/Logo.jpeg";
+
+import { toast } from "sonner";
+
+function Authentication() {
   const [form, setForm] = useState({
     email: "",
     password: "",
@@ -39,72 +55,172 @@ function Login() {
   };
 
   return (
-    <div className="tw-flex tw-justify-center tw-items-center tw-flex-col tw-bg-[#7a1d39] tw-p-[40px] md:tw-flex md:tw-flex-row">
-        <Box sx={{ display: "flex", flexDirection: "column", rowGap: "40px" }}>
-           {isSuccess ? ( 
-               <Box> 
-                  <Typography> 
-                    Verificated your Email
-                  </Typography> 
-               </Box> 
-            ) : ( 
-               <Box 
-                  sx={{ 
-                     display: 'flex', 
-                     flexDirection: 'column', 
-                     rowGap: '18px', 
-                  }} 
-               >
-          <Box sx={{ display: "flex", alignItems: "center" }}>
-            <Typography sx={{ color: "#f5ebeb", fontWeight: "400" }}>
-              EasyEn
-            </Typography>
+    <Box sx={{ display: "flex", height: "100vh" }}>
+      <Box
+        sx={{
+          flexBasis: "50%",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        {isSuccess ? (
+          <Box>
+            <p>Hello</p>
           </Box>
-          <Box
-            sx={{ display: "flex", flexDirection: "column", rowGap: "16px" }}
-          >
-            <Typography sx={{ color: "#f5ebeb", fontWeight: "600" }}>
-              Log In
-            </Typography>
-            <Typography sx={{ color: "#f5ebeb", fontWeight: "400" }}>
-              Log in to stay connected.
-            </Typography>
-          </Box>
-          <TextField id="outlined-basic" label="Email" variant="outlined" value={form.email} 
-                        onChange={handleChange} />
-          <TextField id="outlined-basic" label="Password" variant="outlined"  type="password" 
-                        value={form.password} 
-                        onChange={handleChange} />
-          <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-            <Box sx={{ display: "flex", alignItems: "center" }}>
-              <Checkbox color="default" />
-              <Typography sx={{ color: "#f5ebeb", fontWeight: "400" }}>
-                Remember me?
-              </Typography>
-            </Box>
-            <Button variant="text" className="tw-text-[#f5ebeb]">
-              Forgot Password
-            </Button>
-          </Box>
+        ) : (
           <Box
             sx={{
               display: "flex",
-              justifyContent: "center",
-              paddingX: "24px",
-              paddingY: "8px",
+              flexDirection: "column",
+              rowGap: "18px",
             }}
           >
-            <Button
-              variant="contained"
-              className="tw-bg-[#f5ebeb] tw-text-[#7a1d39]"  disableElevation 
-                        onClick={handleSubmit} 
+            <Box sx={{ display: "flex", alignItems: "start" }}>
+              <Typography
+                sx={{
+                  ml: "8px",
+                  fontSize: "33px",
+                  mr: "42px",
+                }}
+              >
+                EasyEn
+              </Typography>
+            </Box>
+            <Box sx={{ textAlign: "center" }}>
+              <Box
+                sx={{
+                  fontSize: "33px",
+                  fontWeight: "600",
+                }}
+              >
+                Log In
+              </Box>
+              <Box
+                sx={{
+                  fontSize: "17px",
+                  fontWeight: "400",
+                  color: "#8A92A6",
+                }}
+              >
+                Log in to stay connected.
+              </Box>
+            </Box>
+            <Box>
+              <TextField
+                id="outlined-basic"
+                label="Email"
+                variant="outlined"
+                fullWidth
+                value={form.email}
+                onChange={handleChange}
+              />
+            </Box>
+            <Box>
+              <TextField
+                id="outlined-basic"
+                label="Password"
+                variant="outlined"
+                fullWidth
+                type="password"
+                value={form.password}
+                onChange={handleChange}
+              />
+            </Box>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
             >
-              Log in
-            </Button>
+              <FormControlLabel
+                control={<Checkbox defaultChecked />}
+                label="Remember me?"
+                sx={{ color: "#8A92A6" }}
+              />
+              <Button sx={{ color: "#3A57E8" }}>Forgot Password</Button>
+            </Box>
+            <Box>
+              <Button
+                sx={{
+                  px: "50px",
+                }}
+                variant="contained"
+                fullWidth
+                color="#fff"
+                disableElevation
+                onClick={handleSubmit}
+              >
+                Sign in
+              </Button>
+            </Box>
+            <Box
+              sx={{
+                fontSize: "16px",
+                fontWeight: "400",
+              }}
+            >
+              or sign in with other accounts?
+            </Box>
+            <Box
+              sx={{
+                display: "flex",
+                columnGap: "25px",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <GoogleIcon
+                sx={{
+                  color: "#0286F7",
+                  backgroundColor: "#fff",
+                }}
+              />
+              <FacebookIcon
+                sx={{
+                  color: "#395196",
+                  backgroundColor: "#fff",
+                }}
+              />
+              <InstagramIcon
+                sx={{
+                  color: "#6228d7",
+                  backgroundColor: "#fff",
+                }}
+              />
+              <TwitterIcon
+                sx={{
+                  color: "#1381ab",
+                  backgroundColor: "#fff",
+                }}
+              />
+            </Box>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Box>Don’t have an account? </Box>
+              <Box sx={{ color: "#3A57E8" }}>Click here to sign up.</Box>
+            </Box>
           </Box>
-       </Box>   
-    </div>
+        )}
+      </Box>
+
+      <Box
+        sx={{
+          flex: "1 1 auto",
+          backgroundColor:
+            "radial-gradient(50% 50% at 50% 50%, #3B8AFF 0%, #0048B2 100%)",
+        }}
+      >
+        <Image src={Logo} alt="Logo" />
+      </Box>
+    </Box>
   );
 }
-
-export default Login;*/
+export default Authentication;
