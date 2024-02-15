@@ -14,11 +14,6 @@ export default function Home() {
             className="tw-w-[250px] tw-h-[200px] md:tw-w-[450px] md:tw-h-[500px]"
           />
         </div>
-        <div>
-          <Typography className="tw-text-[#f5ebeb] tw-font-extrabold tw-text-[23px] tw-flex md:tw-hidden">
-            EasyEn
-          </Typography>
-        </div>
         <div className="tw-text-[#d6c3a5] tw-flex tw-flex-col tw-justify-between">
           <div className="tw-flex tw-flex-col tw-gap-y-[70px]">
             <Typography className=" tw-text-[15px] md:tw-text-[23px]">
