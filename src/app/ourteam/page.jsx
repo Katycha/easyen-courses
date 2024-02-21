@@ -132,7 +132,7 @@ const Ourteam = () => {
             <Image
               src={Hi}
               alt="mobile"
-              className="tw-w-[300px] tw-h-[200px] md:tw-w-[450px] md:tw-h-[300px] md:tw-ml-10 tw-rounded-[10%]"
+              className="tw-w-[200px] tw-h-[170px]  md:tw-w-[450px] md:tw-h-[300px] md:tw-ml-10 tw-rounded-[10%]"
             />
           </div>
         </div>
