@@ -26,6 +26,8 @@ const Ourteam = () => {
       test: "IELTS 7.5",
       age: 32,
       level: "Beginner level",
+      schedule: "Mn, Wd, Fr 16:00",
+      price: "100$/month",
     },
     {
       img: Syimyk,
@@ -36,6 +38,8 @@ const Ourteam = () => {
       test: "SAT 200",
       age: 24,
       level: "Upper-intermediate level",
+      schedule: "Mn, Wd, Fr 10:00",
+      price: "150$/month",
     },
     {
       img: Benazir,
@@ -46,6 +50,8 @@ const Ourteam = () => {
       test: "TOEFL 120",
       age: 27,
       level: "Intermediate level",
+      schedule: "Tu, Th, St 15:00",
+      price: "100$/month",
     },
     {
       img: Aiperi,
@@ -56,6 +62,8 @@ const Ourteam = () => {
       test: "IELTS 8.0",
       age: 24,
       level: "Beginner level",
+      schedule: "Mn, Wd, Fr 16:00",
+      price: "100$/month",
     },
 
     {
@@ -67,6 +75,8 @@ const Ourteam = () => {
       test: "IELTS 7.5",
       age: 30,
       level: "Upper-intermediate level",
+      schedule: "Mn, Wd, Fr 09:00",
+      price: "200$/month",
     },
     {
       img: Nursultan,
@@ -77,11 +87,16 @@ const Ourteam = () => {
       test: "Duolingo 90",
       age: 26,
       level: "Intermediate level",
+      schedule: "Tu, Th, St 16:00",
+      price: "110$/month",
     },
   ];
 
   const handleClick = (event) => {
     toast.success("Successfully joined!");
+
+    localStorage.setItem(`teacher_${teachers.id}`, JSON.stringify(teachers));
+    console.log(`teacher_${teachers.id}`);
   };
 
   return (
@@ -110,7 +125,7 @@ const Ourteam = () => {
               <Button
                 variant="contained"
                 className="tw-bg-[#d6c3a5] tw-text-[#7a1d39]"
-                onClick={handleClick}
+                onClick={handleClick(item)}
               >
                 join
               </Button>

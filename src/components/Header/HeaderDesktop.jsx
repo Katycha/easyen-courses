@@ -4,8 +4,6 @@ import { Link, ListItem, ListItemText } from "@mui/material";
 import { NAVIGATIONS } from "./Header";
 import Image from "next/image";
 import Logo from "@/assets/Logo.jpeg";
-import LanguageIcon from "@mui/icons-material/Language";
-import LanguageSwitcher from "../Switcher";
 
 const HeaderDesktop = () => {
   return (

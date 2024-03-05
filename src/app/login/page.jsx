@@ -105,6 +105,11 @@ function Authentication() {
                 fullWidth
                 value={form.email}
                 onChange={handleEmailChange}
+                inputProps={{
+                  style: {
+                    backgroundColor: "#d6c3a5",
+                  },
+                }}
               />
             </Box>
             <Box>
@@ -116,6 +121,12 @@ function Authentication() {
                 type="password"
                 value={form.password}
                 onChange={handlePasswordChange}
+                inputProps={{
+                  style: {
+                    backgroundColor: "#d6c3a5",
+                    color: "#d6c3a5",
+                  },
+                }}
               />
             </Box>
             <Box
