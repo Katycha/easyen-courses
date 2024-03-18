@@ -92,11 +92,8 @@ const Ourteam = () => {
     },
   ];
 
-  const handleClick = (event) => {
+  const handleClick = () => {
     toast.success("Successfully joined!");
-
-    localStorage.setItem(`teacher_${teachers.id}`, JSON.stringify(teachers));
-    console.log(`teacher_${teachers.id}`);
   };
 
   return (
@@ -125,7 +122,7 @@ const Ourteam = () => {
               <Button
                 variant="contained"
                 className="tw-bg-[#d6c3a5] tw-text-[#7a1d39]"
-                onClick={handleClick(item)}
+                onClick={handleClick}
               >
                 join
               </Button>
